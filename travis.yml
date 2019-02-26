@@ -23,4 +23,4 @@ script:
     - travis_wait sudo ./build.sh --arch="$ARCH" --version="$VERSION" --qemuarch="$QEMU_ARCH" --qemuversion="$QEMU_VER" --repo="$DOCKER_REPO" --goarch="$GO_ARCH" --etcdurl="$ETCD_URL" 
 after_success:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker push $DOCKER_REPO
+    - docker push $DOCKER_REPO:$ARCH-latest
