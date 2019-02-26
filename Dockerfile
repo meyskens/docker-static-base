@@ -1,5 +1,5 @@
 ARG arch
-FROM multiarch/alpine:${arch}-v3.8
+FROM multiarch/alpine:${arch}-v3.7
 
 RUN apk add --no-cache lighttpd
 
